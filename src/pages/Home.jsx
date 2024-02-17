@@ -11,7 +11,7 @@ const Home = () => {
   };
   return (
     <>
-    <h1>I am Home Page.</h1>
+      <h1>Hay !! I am Home page.</h1>
     <div ><button onClick={navigateHandler}>Go to Products</button> </div>
     </>
   );

@@ -4,17 +4,20 @@ import About from "./pages/About";
 import Main from "./layouts/Main";
 import Products from "./pages/Products";
 import Error from "./pages/Error";
-import Product from "./pages/Product";
+import ProductDetail from "./pages/ProductDetail";
+
 
 const router = createBrowserRouter([
-  {path : "" ,
+  {path : "/" ,
   element : <Main />,
   errorElement : <Error />,
   children: [
-    {path : "/",element :<Home/> },
+    {index : true,element :<Home/> },
     {path : "/about",element :<About/> },
     {path : "/products",element : <Products />},
-    {path : "/product/:id",element:<Product />}
+    {path : "/products/:title",element : <ProductDetail />},
+    // {path : "/productdetail/:title",element:<ProductDetail />},
+
   ] }
 
 ]);

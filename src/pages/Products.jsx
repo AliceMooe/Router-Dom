@@ -1,11 +1,38 @@
-import React from 'react'
+import { Link } from "react-router-dom";
+const PRODUCTS = [
+{
+  id : 1,
+  title : "Apple" ,
+  description : "Lorem ............"
+},
+{
+  id : 2,
+  title : "Pineapple" ,
+  description : "Lorem ............"
+},
+{
+  id : 3,
+  title : "Orange" ,
+  description : "Lorem ............"
+} ,
+];
 
 const Products = () => {
   return (
     <>
-    <h1>I am Product Page</h1>
-    </>
-  )
-}
+    {
+      PRODUCTS.map((product)=>(
+        <Link to = {`/products/${product.title}`}>
+    
+               
+         <div  key={product.id}  className="card">
+          <p className="title">{product.title}</p>
+          <p>{product.description}</p>
+        </div>
 
-export default Products
+        </Link>
+      ))}
+    </>
+    )
+};
+export default Products;
